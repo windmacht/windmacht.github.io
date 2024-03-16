@@ -1,0 +1,265 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindMacht.nl - Leer tegen de wind in zeilen</title>
+    <script src="https://mark-down.github.io/element.js"></script>
+    <script src="https://load-file.github.io/element.js"></script>
+    <script>
+        customElements.define("bedrag-euro", class extends HTMLElement {
+            connectedCallback() {
+                setTimeout(() => {
+                    this.innerHTML = "&euro;" + this.innerHTML;
+                });
+            }
+        });
+    </script>
+    <style>
+        :root {
+            --titlecolor: #0000ffff;
+            --fontcolor: #333;
+            --attentionfontsize: 1.5em;
+            --backgroundcolor: beige;
+            --padding-left: 10px;
+        }
+
+        body,
+        main,
+        section #logo {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: var(--fontcolor);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 900px;
+            background-color: var(--backgroundcolor);
+            padding: 0em;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .wind {
+            color: var(--titlecolor);
+            font-size: var(--attentionfontsize);
+            font-weight: bold;
+            line-height: 1em;
+            text-shadow: 1px 1px 1px grey;
+        }
+
+        h1,
+        h2 {
+            box-sizing: border-box;
+            width: 100%;
+            background: #0002;
+            color: var(--titlecolor);
+            margin-bottom: 0;
+            text-shadow: 1px 1px 1px grey;
+            padding-left: var(--padding-left);
+        }
+
+        h1 {
+            padding: 0;
+            background: transparent;
+        }
+
+        h2 {
+            margin-bottom: .5em;
+        }
+
+        .sitetext,
+        p {
+            margin-top: 0;
+            margin-left: var(--padding-left);
+            color: black;
+            text-shadow: .5px .5px .5px grey;
+        }
+
+        tr td:nth-child(1) {
+            padding-left: var(--padding-left)
+        }
+
+        tr td:nth-child(2) {
+            padding-top: .2em;
+        }
+
+        .sitetext>p:nth-child(1) {
+            margin-bottom: .25em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <article>
+        <main>
+            <section id="section_title">
+                <h1>
+                    <img id="logo" alt="WindMacht.nl leer tegen de wind in zeilen" src="./windmacht_header_logo1.svg">
+                </h1>
+            </section>
+            <section>
+                <style>
+                    .windmacht-grid {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .windmacht-grid .row {
+                        display: flex;
+                        flex: 1;
+                    }
+
+                    .windmacht-grid .cell {
+                        flex: 1;
+                        /* border: 1px solid black; */
+                        /* box-sizing: border-box; */
+                        /* display: flex; */
+                        /* justify-content: center; */
+                        /* align-items: center; */
+                    }
+
+                    .cell:first-child {
+                        flex: .18;
+                        /* This makes the first cell twice as wide as the others */
+                    }
+                </style>
+                <div class="windmacht-grid">
+                    <div class="row">
+                        <div class="cell"><span class="wind">Wind:</span></div>
+                        <div class="cell sitetext">
+                            <p>Beweging van lucht van hoge naar lage drukgebieden, veroorzaakt door
+                                temperatuurverschillen.
+                                Natuurfenomeen waar je geen invloed op hebt.</p>
+                            <p>Tegenwind dwingt tot koerswijziging, niet tot verandering van jezelf of je doelen.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"><span class="wind">Macht:</span></div>
+                        <div class="cell sitetext">
+                            <p>Vermogen om invloed uit te oefenen of controle te hebben over
+                                situaties (of
+                                personen).</p>
+                            <p> Macht stelt je in staat jouw koers te veranderen; bij tegenwind moet je laveren
+                                (slim&nbsp;navigeren) om je bestemming
+                                te bereiken.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sitetext">
+                <h2>Over jouw zeilsinstructeur Danny</h2>
+                <p>
+                    In mijn jeugd leerde ik zeilen op de Loosdrechtse Plassen, het IJsselmeer en de Waddenzee.
+                </p>
+                <p>Als CWO-gecertificeerd zeilinstructeur (ZI-A) bij (voormalig) Zeilschool de Vier Windstreken
+                    (Loosdrecht) vond
+                    ik een balans tussen serieus leren zeilen volgens alle regeltjes en plezier maken met de wind.
+                    <br>
+                    Net als op het water, heb ik in het leven geleerd te
+                    laveren bij tegenwind, altijd mijn eigen koers varend. Nu geef ik deze
+                    levenslessen door.
+                </p>
+                <p>
+                    Je heb <b>geen</b> diploma nodig om in Nederland een zeilboot te huren.
+                </p>
+            </section>
+            <section class="sitetext">
+                <h2>Programma en Kosten</h2>
+                <p>Ik geef bij voorkeur les op de Kagerplassen, omdat ik daar een motorboot heb liggen waar we warme
+                    koffie of chocolademelk kunnen drinken.
+                </p>
+                <p>
+                    Ik begin na 10:00 uur met lesgeven, omdat het dan meestal warmer is en de wind is toegenomen.
+                    Eind van de dag zal de wind wat afnemen door de dalende temperatuur.
+                </p>
+                <p>
+                    <b>kosten</b>
+                    <br>
+                    <b>3 uur les</b> <bedrag-euro>175</bedrag-euro><br>
+                    <b>Hele dag:</b> <bedrag-euro>250</bedrag-euro><br>
+                    <b>Avond lessen </b> Alleen op de Kagerplassen, van 18:00 tot zonsondergang:
+                    <bedrag-euro>125</bedrag-euro>
+                </p>
+            </section>
+            <section class="sitetext">
+                <h2>Het zeilweer deze week</h2>
+                <table id="weertabel">
+                    <style>
+                        #weertabel th {
+                            color: var(--titlecolor);
+                        }
+
+                        #weertabel td {
+                            vertical-align: top;
+                        }
+                    </style>
+                    <tr>
+                        <th>Kagerplassen</th>
+                        <th>Uitgeest</th>
+                        <th>Loosdrecht</th>
+                        <th>Buienradar</th>
+                    </tr>
+                    <tr>
+                        <td><buienradar-station station="6240"></buienradar-station></td>
+                        <td><buienradar-station station="6235"></buienradar-station></td>
+                        <td><buienradar-station station="6260"></buienradar-station></td>
+                        <td><buienradar-station station="0000"></buienradar-station></td>
+                    </tr>
+                </table>
+                <script>
+                    customElements.define("buienradar-station", class extends HTMLElement {
+                        connectedCallback() {
+                            this.style.display = "inline-block";
+                            this.style.height = "230px";
+                            //this.style.background = "pink";
+                            let station = this.getAttribute("station") || "6240";
+                            let size = "width=175 height=390";
+                            let portrait = "portrait";
+                            this.style.height = "430px";
+                            this.style.overflow = "hidden";
+                            if (this.hasAttribute("landscape")) {
+                                size = "width=300 height=190";
+                                portrait = "";
+                            }
+                            console.log(portrait, size, station);
+                            let src = `https://gadgets.buienradar.nl/gadget/forecastandstation${portrait}/${station}/`;
+                            if (station == "0000") {
+                                src = `https://gadgets.buienradar.nl/gadget/radarfivedays`;
+                                size = "width=300 height=430"
+                            }
+                            let html = `<iframe src="${src}" ${size} noresize scrolling=no hspace=0 vspace=0 frameborder=0 marginheight=0 marginwidth=0></iframe>`;
+                            console.log(html);
+                            this.innerHTML = html;
+                        }
+                    });
+                </script>
+            </section>
+            <section>
+                <h2>De club van Windkracht 5</h2>
+                <p>Bij deze windkracht is het niet verstandig om met beginners het water op te gaan. Maar voor
+                    gevordenden is
+                    alles boven windkracht 4 juist een uitdaging.</p>
+                <p>Bij uitdagende windcondities stuur ik een bericht naar de <b>WindMacht5</b> app groep; iedereen die
+                    mee wil
+                    zeilen meldt zich, wie het eerste appt die eerst zeilt. De boot is vol bij instructeur + 2 zeilers
+                </p>
+            </section>
+            <load-file src="./windmacht_header_logo1.svg"></load-file>
+        </main>
+    </article>
+    <footer>
+        <p>© WindMacht.nl - Danny Engelman</p>
+    </footer>
+
+</body>
+
+</html>
